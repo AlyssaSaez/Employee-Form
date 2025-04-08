@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import EmployeeForm from './components/EmployeeForm';
+import EmployeeList from './components/EmployeeList';
 import './App.css';
 
 function App() {
   const [employees, setEmployees] = useState([]);
 
-  // Load saved data from localStorage on component mount
   useEffect(() => {
     const storedEmployees = localStorage.getItem('employees');
     if (storedEmployees) {
@@ -13,20 +13,22 @@ function App() {
     }
   }, []);
 
-  // Save to localStorage when employees array changes
   useEffect(() => {
     localStorage.setItem('employees', JSON.stringify(employees));
   }, [employees]);
 
-  // Add a new employee to state
   const addEmployee = (employee) => {
     setEmployees([...employees, employee]);
   };
 
   return (
-    <div className="App">
-      <EmployeeForm onAddEmployee={addEmployee} />
-    </div>
+<div className="App">
+  <div className="employee-container">
+    <EmployeeForm onAddEmployee={addEmployee} />
+    <EmployeeList employees={employees} />
+  </div>
+</div>
+
   );
 }
 

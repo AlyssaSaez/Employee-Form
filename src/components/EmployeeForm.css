@@ -73,4 +73,55 @@ body {
     box-shadow: 0 0 10px rgba(248, 231, 28, 0.6), 0 6px 14px rgba(168, 224, 99, 0.4);
   }
 
+  .employee-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
   
+  .employee-list {
+    background-color: #ffffffdd;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .employee-list h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .employee-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .employee-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+  }
+  
+    .employee-form,
+    .employee-list {
+      flex: 1 1 300px;
+      max-width: 400px;
+      min-width: 300px;
+    }
+
+    @media (max-width: 600px) {
+      .employee-form,
+      .employee-list {
+        max-width: 90%;
+      }
+    }
+    
+    
+    

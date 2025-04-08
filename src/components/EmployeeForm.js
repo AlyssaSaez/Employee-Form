@@ -18,7 +18,11 @@ class EmployeeForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+
+    // Pass employee data up to App.js
+    this.props.onAddEmployee({ ...this.state });
+
+    // Clear the form
     this.setState({
       name: '',
       email: '',

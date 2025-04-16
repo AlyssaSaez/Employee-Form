@@ -22,11 +22,12 @@ body {
     background-color: #fff;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
+  
   
   .employee-form h2 {
     text-align: center;
@@ -109,12 +110,6 @@ body {
     color: #444;
   }
   
-    .employee-form,
-    .employee-list {
-      flex: 1 1 300px;
-      max-width: 400px;
-      min-width: 300px;
-    }
 
     @media (max-width: 600px) {
       .employee-form,
@@ -140,4 +135,16 @@ body {
       background-color: #c0392b;
     }
     
+    .confirmation {
+      color: #2ecc71;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .form-wrapper,
+    .employee-list {
+      flex: 1 1 300px;
+      max-width: 400px;
+      min-width: 300px;
+    }
     

@@ -21,11 +21,19 @@ function App() {
     setEmployees([...employees, employee]);
   };
 
+  const removeEmployee = (indexToRemove) => {
+    const updatedEmployees = employees.filter((_, index) => index !== indexToRemove);
+    setEmployees(updatedEmployees);
+  };
+  
   return (
 <div className="App">
   <div className="employee-container">
     <EmployeeForm onAddEmployee={addEmployee} />
-    <EmployeeList employees={employees} />
+    <EmployeeList
+  employees={employees}
+  onRemoveEmployee={removeEmployee}
+/>
   </div>
 </div>
 

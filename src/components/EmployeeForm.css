@@ -123,5 +123,21 @@ body {
       }
     }
     
+    .remove-btn {
+      margin-right: 10px;
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85em;
+      transition: background-color 0.3s ease;
+    }
+    
+    
+    .remove-btn:hover {
+      background-color: #c0392b;
+    }
     
     
